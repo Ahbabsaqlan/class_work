@@ -15,10 +15,10 @@ class building{
 };
 
 int main(){
-    double l,w;
-    cin>>l>>w;
-    building b1(l,w);
-    int cost=b1.building_cost();
+    int cost_feet,feet;
+    cin>>cost_feet>>feet;
+    building building(cost_feet,feet);
+    int cost=building.building_cost();
     cout<<cost;
     
 
