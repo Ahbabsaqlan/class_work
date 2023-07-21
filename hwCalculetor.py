@@ -14,15 +14,27 @@ while switch >0:
         inputNum=re.findall('[0-9]+', inputValue)
         if '+'in inputValue:
             value=add(int(inputNum[0]),int(inputNum[1]))
+            if len(inputNum)>2:
+                for i in range(len(inputNum)-2):
+                    value=add(value,int(inputNum[i+2]))
             print(inputValue+" = "+str(value))
         elif '-' in inputValue:
             value=sub(int(inputNum[0]),int(inputNum[1]))
+            if len(inputNum)>2:
+                for i in range(len(inputNum)-2):
+                    value=sub(value,int(inputNum[i+2]))
             print(inputValue+" = "+str(value))
         elif '*' in inputValue:
             value=mul(int(inputNum[0]),int(inputNum[1]))
+            if len(inputNum)>2:
+                for i in range(len(inputNum)-2):
+                    value=mul(value,int(inputNum[i+2]))
             print(inputValue+" = "+str(value))
         elif '/' in inputValue:
             value=div(int(inputNum[0]),int(inputNum[1]))
+            if len(inputNum)>2:
+                for i in range(len(inputNum)-2):
+                    value=div(value,int(inputNum[i+2]))
             print(inputValue+" = "+str(value))
         else:
             print("Warning!\nPlese Enter A Valid Oparator To Perform Calculation!\n")
